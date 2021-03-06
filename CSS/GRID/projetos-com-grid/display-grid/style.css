@@ -1,0 +1,206 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{   
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(245, 59, 90);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 500px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    /* grid-template-areas: "f1 f1 f2 f2 f3 f4"
+                        "f5 f6 f2 f2  f3 f7"
+                        "f8 f9 f9 f10 f10 f11"; */
+}  
+
+.f1{
+    padding: 20px;
+    grid-area: f1;
+    background-color: #fff;
+    grid-row-start: 1;
+    grid-row: 1/2;
+    grid-column: 1/3;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.f1 input{
+    padding: 5px;
+}
+
+.f1 button{
+    padding: 5px;
+    font-size: 14px;
+    background-color: black;
+    border: none;
+    color: #fff;
+}
+
+.f1 button:hover{
+    animation: goesOut;
+
+}
+
+
+
+.f2{
+    grid-area: f2;
+    grid-row: 1/3;
+    background-image: url("./bar.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column: 3/5;
+    background-color: #fff;
+}
+.f3{
+    grid-area: f3;
+    grid-row: 1/3;
+    grid-column: 5/6;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "g w"
+                        "p pinc"
+                        "y r";
+}
+
+.green{
+    grid-area: g ;
+    background-color: green;
+}
+
+.white{
+    grid-area: w;
+    background-color: white;
+}
+
+.purple{
+    grid-area: p;
+    background-color: purple;
+
+}
+
+.pink{
+ grid-area: pinc;
+ background-color: rgb(240, 11, 182);
+}
+
+.yellow{
+    grid-area: y;
+    background-color: yellow;
+}
+
+.red{
+    grid-area: r;
+    background-color: red ;
+}
+
+.f4{
+    grid-area: f4;
+    grid-row: 1/2;
+    grid-column: 6/7;
+    background-color: #ccc;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 10px;
+}
+
+.children{
+    width: 100px;
+    height: 100px;
+    background-image: url('./homer.jpg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    
+}
+
+.f5{
+    grid-area: f5;
+    grid-row: 2/3;
+    grid-column:6/7;
+    background-color: #fff;
+}
+
+.f6{
+    grid-area: f6;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    background-color: #fff;
+}
+
+.f7{
+    grid-area: f7;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    background-color: #fff;
+}
+
+.f8{
+    grid-area: f8;
+    grid-row: 3/4;
+    grid-column: 1/2;
+    background-color: #fff;
+}
+
+.f9{
+    grid-area: f9;
+    grid-row: 3/4;
+    grid-column: 2/4;
+    background-color: #fff;
+}
+
+.f10{
+    grid-area: f10;
+    grid-row: 3/4;
+    grid-column: 4/6;
+    background-color: #fff;
+    position: relative;
+}
+
+.f10 .animation{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(46, 248, 255);
+    animation: animacao_1 2s infinite;
+}
+
+
+.f11{
+    grid-area: f11;
+    grid-row: 3/4;
+    grid-column: 6/7;
+    background-color: #fff;
+}
+
+@keyframes animacao_1{
+    0%{
+        left: 0;
+    }
+
+    45%{
+        left: 100%;
+        transform: translatex(-100%);
+        background-color: red;
+    }
+    100%{
+        left: 0
+    }
+}

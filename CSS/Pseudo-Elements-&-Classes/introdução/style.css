@@ -1,0 +1,48 @@
+/*PSEUDO-CLASSES*/
+
+/*::ROOT*/
+/* :root can be useful for declaring global CSS variables: */
+/* The :root CSS pseudo-class matches the root element of a tree representing the document. In HTML, :root represents the <html> element and is identical to the selector html, except that its specificity is higher */
+
+/* :root {
+  color: red;
+} */
+
+
+/*----------------------------------------PSEUDO-ELEMENTOS-----------------------------------------------------*/
+
+/*WEB DEV SIMPLIFIED*/
+/* .required::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+} */
+
+/* .required::after{
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(165, 250, 37);
+} */
+
+.required::after{
+  content: "*";
+}
+
+[data-tooltip]{
+  position: relative;
+}
+
+[data-tooltip]:hover::after{
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 5px;
+  padding: 5px;
+  background-color: lightgray;
+}

@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    font-family: "Open Sans", sans-serif;
+    font-size: 25px;
+}
+
+.example{
+    text-align: justify;
+    color: #fff
+}
+
+.example::after{
+    content: 'casa verde';
+    width: 100%;
+    display: inline-block;
+    background-color: blue;
+}
+
+.example-item{
+    display: inline-block;
+    width:25%;
+    height: 150px;  
+}
+
+.example-item_first{
+    background-color: chartreuse;
+
+}
+
+.example-item_second{
+    background-color: crimson;
+    
+}
+.example-item_third{
+    background-color: darkmagenta;
+    
+}
+
+p{
+    text-align: justify ;
+}
+
+
+
+
+
+
+
+

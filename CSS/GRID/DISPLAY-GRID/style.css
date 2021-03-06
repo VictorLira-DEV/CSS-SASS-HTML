@@ -1,0 +1,73 @@
+/*importante atentar sobre as linhas virtais de colunas e de linhas*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    background: #7159c1;
+}
+
+header{
+    text-align: center;
+    line-height: 100px;
+    letter-spacing: 20px;
+    background-color: yellow;
+    padding: 10px;
+    grid-area: header;
+    /*grid-column: 1/3;
+    grid-row: 1/2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;*/
+}
+
+main{
+    text-align: center;
+    background-color: blue;
+    line-height: 500px;
+    letter-spacing: 20px;
+    padding: 10px;
+    /*grid-column-start: 1;
+    grid-column-end: 2;*/
+    grid-area: main;
+}
+
+aside{
+    text-align: center;
+    background-color: red;
+    line-height: 500px;
+    letter-spacing: 20px;
+    padding: 10px;
+    /*grid-column-start: 2;
+    grid-column-end: 3;*/
+    grid-area: aside;
+}
+
+footer{
+    text-align: center;
+    background-color: rgb(67, 243, 67);
+    letter-spacing: 20px;
+    padding: 10px;
+    /*grid-column-start: 1;
+    grid-column-end: 3;*/
+    grid-area: footer;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 3fr 1fr; /*indica que bloco será flex, ou seja se adapata aos tamanhos de tela*/
+    grid-template-rows:20vh 70vh 10vh;
+    grid-template-areas: "header header"
+                        "main aside"
+                        "footer footer"
+    ;
+                        
+
+    /*grid-gap: 20px 10px;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px*/
+}

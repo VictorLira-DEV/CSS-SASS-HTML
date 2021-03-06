@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 30px;
+  height: 200vh;
+}
+/*a posição estatica apenas permanece estática dentro  do seu container, e é necessário definir o top como zero nesse caso*/
+.list-header {
+  position: sticky;
+  top: 0;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: black;
+  color: greenyellow;
+}
+
+.list-content {
+  font-size: 20px;
+  padding: 0px 20px;
+}

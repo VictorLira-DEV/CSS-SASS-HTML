@@ -1,0 +1,44 @@
+*{
+ margin:0;
+ padding:0;
+ box-sizing: border-box;
+}
+
+html,body{
+	height: 100%;
+}
+
+
+.slider{
+	width:97%;
+	margin:0 auto;
+	max-width: 700px;
+	height:500px;
+	border:1px solid #ccc;
+	position: relative;
+}
+
+.img-slider{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width:100%;
+	height:100%;
+}
+
+.one{
+	background-color: deeppink;
+	z-index: 1;
+	left: 50%;
+}
+
+.two{
+	background-color: gold;
+	z-index: 2;
+	left: 30%;
+}
+
+.three{
+	background-color: black;
+	z-index: 3;
+}

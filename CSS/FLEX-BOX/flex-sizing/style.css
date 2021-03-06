@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 15pt;
+    font-weight: 600;
+    background-color: #ccc  ;
+}
+
+.semborderbox{
+    order:2;
+    flex-basis: 5em;
+    background-color: deeppink;
+}
+
+.comborderbox{
+    order:1;
+    flex-basis: 10em;
+    background-color: blue;
+}
+
