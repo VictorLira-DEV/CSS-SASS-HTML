@@ -6,7 +6,7 @@ console.log(`o valor tem ${numb.length} posições`)
 console.log(`o primeiro valor do vetor é ${numb[0]}`)
 console.log(`o segundo valor do vetor é o ${numb[1]}`)
 let pos = numb.indexOf(9)
-
+//pesquise novamente
 if (pos == -1){
     console.log('o valor não foi encontrado')
 
