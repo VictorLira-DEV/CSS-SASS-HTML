@@ -1,0 +1,22 @@
+/*tipos de variaveis*/
+body {
+  background: #f5c7c7; }
+
+nav {
+  background: #962acd;
+  color: #fff;
+  width: 100%;
+  font-size: 1.2rem; }
+
+aside {
+  width: 300px; }
+
+section {
+  font-family: "Lucida Grande";
+  font-weight: 100;
+  background: rgba(0, 0, 0, 0.7);
+  width: 300px;
+  height: 300px;
+  color: #fff;
+  margin: 10px 10px 10px 10px;
+  padding: 20px 20px; }

@@ -1,0 +1,20 @@
+h1 {
+  font-size: 7px; }
+
+h1 {
+  font-size: 3px; }
+
+p {
+  font-size: 1px; }
+
+p {
+  color: #050709; }
+
+p {
+  cursor: e-resize; }
+
+p:before {
+  content: "Eu tenho 12 moedas"; }
+
+p:before {
+  content: "eu tenho  moedas ."; }

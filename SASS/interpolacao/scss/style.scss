@@ -1,0 +1,56 @@
+$name: destaque;
+$attr: border;
+p.#{$name} {
+    border: 1px solid;
+    #{$attr}-color:blue;
+    color: red;
+}
+
+p{
+    $font-size: 30;
+    $line-height: 30;
+    font-size: $font-size / $line-height + rem;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 189, 189);
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+$color: color;
+$box-1: green;
+$box-2: rgb(184, 4, 184);
+$box-3: rgb(207, 65, 65);
+
+.container .box:nth-child(2){
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.box{
+    border: 1px solid white;
+    width: 200px;
+    height: 200px;
+}
+
+.box1{
+    background-#{$color}: $box-1;
+}
+
+.box2{
+    background-#{$color}: $box-2;
+}
+
+.box3{
+    background-#{$color}: $box-3;
+}

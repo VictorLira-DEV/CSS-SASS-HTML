@@ -1,0 +1,72 @@
+//adição
+//o segundo valor não pode ter a unidade, como pixel
+
+h1{
+    // font-size: 2em + 22px; unidades incompativeis
+    font-size: 5px + 2 
+    // font-size: 5px * 2px //unidades incompativeis
+}
+
+//subtraction and negative numbers
+// O - pode ter varios significados no css e sass
+//um operador de subtração como (5px - 3px)
+//o inicio de um número negativo como (-3)
+//um operador de negação unário ( como - $var)
+//parte de um identificador
+//inclua espaços em ambos os lados(4px - 2px)
+//inclua um espaço antes - mas não depois de um número negativo ou de uma negação unária ( 4px + -2px)
+//colocar uma negação unária entre parenteses caso ela esteja  em uma lista separada por espaço, como em 10px (-$var)
+h1{
+    font-size: 5px - 2; //3px
+}
+
+//division and /
+// se o valor ou qualquer parte deleé armazenado em uma variável ou retornado por uma função
+//se o valor estiver entre parenteses, a menos que esses parenteses estejam fora de uma lista e o valor dentro
+//se o valor é usado como parte de uma expressão aritmérica
+
+$base-size: 20px;
+$line-height: 20px;
+
+p{
+    // font: 10px/8; //false
+    // width: 1000px;
+    // width: $width/2; //true
+    // width: round(1.5)/2; //true
+    // height: (500px/2); //true
+    // margin-left: 5px + 8px/2px;  //true
+    // font: (italic bold 10px/8px); //false
+    // font: (italic bold (10px/8px)); //true
+    // font-size: #{$base-size} #{$line-height}; //false
+    // font-size: $base-size / $line-height //true
+}
+
+//Módulo
+
+$font-size: 27px;
+
+p {
+    font-size: $font-size % 2 ; // irá imprimir o resto da divisão
+}
+
+//color operations
+//todas as operações aritiméticas são suportadas para valores de cor, onde trabalham por partes. Exemplo.
+p{
+    color: #010203 + #040506
+}
+
+//STRING OPERATIONS
+
+p{
+    cursor: e-resize; //ira concatenar
+}
+
+p:before {
+    content: "Eu tenho #{ 2 + 10} moedas";
+}
+
+$value: null;
+
+p:before {
+    content: 'eu tenho #{ $value } moedas .'
+}

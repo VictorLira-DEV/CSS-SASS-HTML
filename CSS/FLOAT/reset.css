@@ -1,0 +1,29 @@
+/*ao aplicar o float, ele cria um novo contexto para o elemnto, colocando o mesmo na frente*/
+
+.elementExample{
+    width: 200px;
+    height: 200px;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.elementExample_first{
+    background-color: purple;
+    float: left;
+}
+
+.elementExample_last{
+    background-color: red;
+    color: white;
+    float: right;
+}
+
+p {
+    clear: both;
+}
+
+article{
+    background-color: pink;
+    overflow: hidden;
+}

@@ -1,0 +1,12 @@
+instalar global--apenas in stale um vez na maquina
+
+npm install -g node-sass 
+
+---------------------------------
+entrada e saida do arquivo, convers�o
+
+node-sass scss/style.scss css/style.css
+
+ou 
+
+node-sass --watch scss/style.scss css/style.css

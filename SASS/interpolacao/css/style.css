@@ -1,0 +1,38 @@
+p.destaque {
+  border: 1px solid;
+  border-color: blue;
+  color: red; }
+
+p {
+  font-size: 1rem; }
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffbdbd; }
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.container .box:nth-child(2) {
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 50%; }
+
+.box {
+  border: 1px solid white;
+  width: 200px;
+  height: 200px; }
+
+.box1 {
+  background-color: green; }
+
+.box2 {
+  background-color: #b804b8; }
+
+.box3 {
+  background-color: #cf4141; }

@@ -1,0 +1,33 @@
+$red: 100;
+$green: 100;
+$blue: 100;
+$alpha: 0.8;
+$color: red;
+$amount: 80%;
+$font: Open Sans;
+$weight: 'bold';
+$real_round: 2.2;
+$real: 2.5;
+
+body{
+    background: rgb($red, $green, $blue);
+}
+
+section{
+    background: rgba($red, $green, $blue, $alpha);
+}
+
+section div{
+    background: lighten($color, $amount);
+    background: darken($color, $amount);
+    font-family: quote($font);
+    font-family: unquote($weight);
+    padding: str-length($weight);
+    font-family: to-upper-case($weight);
+    font-family: to-lower-case($weight);
+    width: percentage(str-length($weight)); //400%
+    height: 200px;
+    margin: round($real_round); //arrenda o numero
+    margin: ceil($real); //joga o número para cima
+    margin: floor($real);// joga  o número para baixo 
+}

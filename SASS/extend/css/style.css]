@@ -1,0 +1,32 @@
+p.p1 {
+  padding: 20px; }
+
+p.p2 {
+  padding: 10px 20px; }
+
+p.p3 {
+  padding: 10px 20px 40px; }
+
+p.p4 {
+  padding: 10px 20px 30px 20px; }
+
+.box {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+  width: 300px;
+  height: 300px; }
+
+.box h1 {
+  color: blue;
+  font-size: 14px; }
+
+.box h2 {
+  color: green;
+  font-size: 14px; }
+
+.box h3 {
+  color: green;
+  font-size: 20px; }

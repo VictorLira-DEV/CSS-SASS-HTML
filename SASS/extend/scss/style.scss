@@ -1,0 +1,114 @@
+/*com o EXTEND é possivel re utilizar as mesmas propriedades de 
+determinada classe em outra, e na outra classe é possivel 
+sobrescrever algumas propriedades manualmente   */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$background-pink: #FA7697;
+$background-green: #D7F852;
+$background-blue: #B2E3FF;
+$background-white: #fff;
+$text-color: rgb(75, 73, 73);
+
+
+@mixin border($value) {
+    border: $value;
+}
+
+body{
+    padding: 10px;
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 5px 5px;
+}
+
+.box1{
+    border: (1px solid black);
+    background: $background-pink;
+    color: $text-color;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 4rem;
+    line-height: 200px;
+    a{
+        color: black;
+        text-decoration: none;
+
+        &:hover{
+            text-decoration: underline
+        }
+    }
+}
+
+.box2{
+    @extend .box1;
+    a{
+        color: white;
+        &:hover{
+            text-decoration: overline
+        }
+    }
+
+}
+
+.box3{
+    @extend .box1;
+    
+}
+
+.box4{
+    @extend .box1;
+    background-color: $background-green;
+    a{
+        color: red;
+        &:hover{
+            text-decoration: overline;
+        }
+    }
+}
+
+.box5{
+    @extend .box4;
+
+    a{
+        color: blue;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+.box6{
+    @extend .box4;
+}
+
+.box7{
+    @extend .box1;
+    background-color: $background-blue;
+    &:hover{
+        color: $background-white;
+        background-color: black;
+    }
+}
+
+.box8{
+    @extend .box7;
+}
+
+.box9{
+    @extend .box7;
+}

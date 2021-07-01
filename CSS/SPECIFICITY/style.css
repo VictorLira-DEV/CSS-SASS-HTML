@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*grau de espeicifidade*/
+/*0,0,0,0*/ /*primeiro= inline-style, segundo= id, terceiro = classes, quarto = tags*/
+
+/* #header-id {
+    color: black; /*ID são mais expecíficas que classes
+} */
+
+h1.header{
+    /*1,0,0,1,1*/
+    /*NEVER USE IMPORTANT*/
+    color: red !important; /*essa classe é mais especifica do que apenas usar o H1*/
+}
+
+.header-2{
+    /*1,0,0,1,0*/
+    color: greenyellow !important; /*ele elemento ignora a especificidade, e cria outro nivel de especificidade na frente*/
+}
+
+h1{
+    color: blue;
+}
+
+/* .header{
+    color: blue; /*o seletor de baixo irá sobrescrever o seletor de cima
+} */
+
+.text {
+    color: rgb(29, 255, 29);
+    font-size: 18px;
+}

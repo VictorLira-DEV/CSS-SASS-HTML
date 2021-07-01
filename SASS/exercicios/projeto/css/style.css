@@ -1,0 +1,18 @@
+nav {
+  width: 100%;
+  background: #000;
+  /*pseudo-elementos*/ }
+  nav ul {
+    list-style: none;
+    padding: 20px 0; }
+  nav li {
+    color: red;
+    margin: 0 20px;
+    /*propriedades aninhadas*/
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold; }
+  nav a {
+    color: red; }
+    nav a:hover {
+      color: blue; }

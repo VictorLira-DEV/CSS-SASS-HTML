@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/*com o EXTEND é possivel re utilizar as mesmas propriedades de 
+determinada classe em outra, e na outra classe é possivel 
+sobrescrever algumas propriedades manualmente   */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  padding: 10px;
+  width: 100vw;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px; }
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 5px 5px; }
+
+.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9 {
+  border: 1px solid black;
+  background: #FA7697;
+  color: #4b4949;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 4rem;
+  line-height: 200px; }
+  .box1 a, .box2 a, .box3 a, .box4 a, .box5 a, .box6 a, .box7 a, .box8 a, .box9 a {
+    color: black;
+    text-decoration: none; }
+    .box1 a:hover, .box2 a:hover, .box3 a:hover, .box4 a:hover, .box5 a:hover, .box6 a:hover, .box7 a:hover, .box8 a:hover, .box9 a:hover {
+      text-decoration: underline; }
+
+.box2 a {
+  color: white; }
+  .box2 a:hover {
+    text-decoration: overline; }
+
+.box4, .box5, .box6 {
+  background-color: #D7F852; }
+  .box4 a, .box5 a, .box6 a {
+    color: red; }
+    .box4 a:hover, .box5 a:hover, .box6 a:hover {
+      text-decoration: overline; }
+
+.box5 a {
+  color: blue; }
+  .box5 a:hover {
+    text-decoration: underline; }
+
+.box7, .box8, .box9 {
+  background-color: #B2E3FF; }
+  .box7:hover, .box8:hover, .box9:hover {
+    color: #fff;
+    background-color: black; }

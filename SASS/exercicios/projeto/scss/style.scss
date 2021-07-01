@@ -1,0 +1,28 @@
+nav{
+    width: 100%;
+    background: #000;
+
+    ul{
+        list-style: none;
+        padding: 20px 0;
+    }
+
+    li{
+        color: red;
+        margin: 0 20px;
+        /*propriedades aninhadas*/
+        font: {
+            family: Arial;
+            size: 14px;
+            weight: bold;
+        }
+    }
+    /*pseudo-elementos*/
+    a {
+        color: red;
+
+        &:hover {
+            color: blue;
+        }
+    }
+}

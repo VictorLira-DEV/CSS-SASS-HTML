@@ -1,0 +1,49 @@
+*{
+ margin:0;
+ padding:0;
+ box-sizing: border-box;
+}
+
+div.box{
+	width: 300px;
+	height: 300px;
+	position: relative;
+	background-color: green;
+	/*
+	animation-name: animacao_1;
+	animation-duration: 2s;
+	animation-delay: 2s;
+	animation-iteration-count: infinite;
+	*/
+}
+
+div.box:hover{
+	animation: animacao_1 1s 2;
+
+}
+
+@keyframes animacao_1{
+	0%{
+		left: 0;
+		top:0px;
+		background-color: green;
+	}
+
+	45%{
+		border:3px solid red;
+		left: 100px;
+		top:10px;
+		background-color: rgb(183, 0, 255);
+	}
+
+	100%{
+		border:0;
+		left: 0;
+		top:0px;
+		background-color: red;
+	}
+
+}
+
+
+

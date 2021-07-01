@@ -1,0 +1,53 @@
+//mixins  permitem definir estilos que possam ser reutilizados em toda folha de estilos
+
+@mixin border-radius($radius){
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin titulo($size, $color: blue){ //blu é um argumento default
+    color: $color;
+    font-size: $size;
+}
+
+@mixin pad ($values...){
+    padding: $values;
+}
+
+p.p1{ 
+    @include pad(20px)
+}
+
+p.p2{
+    @include pad(10px 20px)
+}
+
+p.p3{
+    @include pad(10px 20px 40px)
+}
+
+p.p4{
+    @include pad(10px 20px 30px 20px)
+}
+
+.box{
+    @include border-radius(10px);
+    border: 1px solid black;
+    width: 300px;
+    height: 300px;
+}
+
+.box h1{
+    @include titulo(14px)
+}
+
+.box h2{
+    @include titulo(14px, green)
+}
+
+.box h3 {
+    //passando o argumento dessa forma fica bem mais claro, e pode ser na order que desejar
+    @include titulo($size: 20px, $color: green )
+}

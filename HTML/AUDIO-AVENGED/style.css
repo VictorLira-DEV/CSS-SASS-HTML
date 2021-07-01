@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+body{
+    background-color: #5d44a7;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.max-width{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin: 10px;
+    margin: 0 auto;
+}
+
+.container .album{
+    background-color: white;
+    height: 230px;
+    padding: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.container .album audio{
+    height: 40px;
+}
+
+/*Nightmare*/
+
+.container .album.nightmare{
+    background-image: url('./images/nightmare.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.container .album.nightmare audio{
+    border-radius: 1px;
+}
+
+/*Avenged sevenfold*/
+
+.container .album.avenged-sevenfold{
+    background-image: url('./images/avenged-sevenfold.jpg');
+    background-size: 100%;
+}
+
+.container .album.avenged-sevenfold audio{
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+/*The stage*/
+
+.container .album.the-stage{
+    background-image: url('./images/thestage.jpg');
+    background-size: cover;
+}
+
+/*Random*/
+.container .album.random{
+    background-image: url('./images/random.jpg');
+    background-size: cover;
+    background-position: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.container .album.random button{
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid black;
+    background-color: #5d44a7;
+    color: white;
+}
+
+/*hurricane*/
+
+.container .album.hurricane{
+    background-image: url('./images/hurricane.jpg');
+    background-size: cover;
+}
+
+/*up in the air*/
+
+.container .album.up{
+    background-image: url('./images/up.jpg');
+    background-size: cover;
+}
+
+/* godzilla */
+.container .album.godzilla{
+    background-image: url('./images/godzila.jpg');
+    background-size: cover;
+}
+
+/*8 mile*/
+
+.container .album.mile8{
+    background-image: url('./images/8mile.jpg');
+    background-size: cover;
+}
+
+/*kill shot*/
+
+.container .album.killshot{
+    background-image: url('./images/killshot.png');
+    background-size: cover;
+}
+
+@media (max-width: 1199px){
+    .container{
+        grid-template-columns: repeat(2, 200px);
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+}

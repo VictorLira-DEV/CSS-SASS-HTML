@@ -1,0 +1,155 @@
+$body-bg: #ccc;
+$btn-blue: #3897f0;
+$border-green: rgb(111, 252, 111);
+$width-100-percent: 100%;
+$height-100-percent: 100%;
+
+@mixin border-radius($value...){
+    -webkit-border-radius: $value;
+    -moz-border-radius: $value;
+    border-radius: $value;
+}
+
+@mixin border($border...){
+    border: $border;
+}
+
+@mixin padding($pad...) {
+    -webkit-padding: $pad;
+    -moz-padding: $pad;
+    padding: $pad;
+}
+
+@mixin margin($marg...){
+    margin: $marg;
+}
+
+@mixin box-sizing($box){
+    -webkit-box-sizing: $box;
+    -moz-box-sizing: $box;
+    box-sizing: $box;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    @include box-sizing(box-sizing)
+
+}
+
+  ul{
+    @include padding(0);
+    margin: 0;
+  }
+
+  img {
+    border: 0;
+  }
+
+  body {
+    background: $body-bg;
+  }
+
+  header {
+    height: 400px;
+    background-color: rgb(235, 174, 174);
+
+    .avatar{
+        @include border-radius(4px);   
+        @include border(1px solid red); 
+        @include padding(10px);
+        width: 50%;
+        text-align: center;
+        font-size: 30 / 16 + rem
+    }
+
+    .desk{
+        @include border(4px solid $border-green);
+        text-align: center;
+        width: 50%;
+        height: 100px;
+    }
+
+    h1, h2{
+        display: inline-block;
+    }
+
+    h1{
+        font-size: 54 / 16 + rem //convertendo pixel para rem
+    }
+    
+    .links{
+        @include border(10px solid $border-green);
+        list-style: none;
+        margin: 10px 0;
+        height: 100px;
+        li{
+            list-style: none;
+            @include margin(0 20px 0 0);
+            display: inline-block;
+            font-size: 17 / 16 + rem
+        }
+    }
+}
+.btn-follow {
+    @include border(2px solid $btn-blue);
+    @include margin(0 20px);
+    @include padding(6px 14px);
+    color: $btn-blue;
+    @include border-radius(20px);
+    font-size: 16 / 16 + rem;
+    &:hover{
+        background: $btn-blue;
+        color: #fff;
+    }
+}
+
+.photos {
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: flex;
+    li{
+        width: $width-100-percent;
+        @include margin(20px 20px);
+        position: relative;
+        font-size: 50 / 16 + rem;
+        img{
+            width: $width-100-percent;
+        }
+        .img-hover{
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: $width-100-percent;
+            height: $height-100-percent;
+            background: rgba(0, 0, 0, 0.3);
+            transition: all 0.3s linear;
+        }
+        &:hover .img-hover{
+            opacity: 1;
+        }
+    }
+}
+
+@media (min-width: 768px){
+    header {
+        flex-flow: row;
+
+        .avatar{
+            margin: 0 40px;
+        }
+
+        .desc{
+            text-align: left;
+        }
+    }   
+    .photos{
+
+        li{
+            width: 30%;
+        }
+    }
+}

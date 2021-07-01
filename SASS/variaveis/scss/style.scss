@@ -1,0 +1,71 @@
+/*tipos de variaveis*/
+
+//------------------------------
+//STRINGS
+$font: 'Lucida Grande';
+$weight: 100;
+
+//------------------------------
+//NÚMERICAS
+$width-rem: 3.5rem;
+$width-px: 300px;
+//---------------------
+
+//CORES
+$bg: rgb(245, 199, 199);
+$bg-section: rgba(0,0,0,0.7);
+$font-color: #ffffff;
+
+//Boolean null
+$color-light: false;
+$color-dark: true;
+$color-dark: null;
+//LISTA
+$margin: 10px 10px 10px 10px;
+$padding: 20px 20px;
+//MAPS
+$social: (
+    facebook: rgb(141, 141, 252),
+    flickr: pink,
+    github: black,
+    instagram: yellow,
+    linkedin: blue,
+    twitter: red,
+    youtube: purple
+);
+
+$width: 100%;
+$font-size: 1.2rem;
+$background:#962acd;
+$color: #fff;
+$border-style: solid 1px $color;
+$width-rem: 3.5rem;
+$width-px: 300px;
+
+body{
+    background: $bg;
+}
+
+nav{
+    background: $background;
+    color: $color;
+    width: $width;
+    font: {
+        size: $font-size;
+    }
+}
+
+aside{
+    width: $width-px;
+}
+
+section{
+    font-family: $font;
+    font-weight: $weight;
+    background: $bg-section;
+    width: 300px;
+    height: 300px;
+    color: $color;
+    margin: $margin;
+    padding: $padding;
+}
