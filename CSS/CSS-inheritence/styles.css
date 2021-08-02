@@ -1,0 +1,10 @@
+div{
+    border: 1px solid black;
+    font-size: 2rem;
+}
+
+/* inherit */
+/* basicamente herda o estilo do componente pai */
+p{
+    border: inherit;
+}

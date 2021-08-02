@@ -19,19 +19,14 @@ main div{
     border: 1px solid black;
 }
 
-main div:not(:nth-child(5)){
-    margin-right: 100px;
-    background: chartreuse;
+main div:first-child{
+    background-color: palevioletred;
 }
 
-main div:nth-child(3){
-    margin-top: 100px;
-}
-
-main div:nth-child(1){
-    margin-top: 100px;
+main div:last-child{
+    background-color: black;
 }
 
 main div:nth-child(5){
-    margin-top: 100px;
+    background-color: yellow;
 }

@@ -1,16 +1,31 @@
 /*importante atentar sobre as linhas virtais de colunas e de linhas*/
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-html, body{
+html,
+body {
     background: #7159c1;
 }
 
-header{
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /*indica que bloco será flex, ou seja se adapata aos tamanhos de tela*/
+    grid-template-rows: 20vh 70vh 10vh;
+    grid-template-areas:
+        "header header"
+        "main aside"
+        "footer footer";
+
+    /*grid-gap: 20px 10px;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px*/
+}
+
+header {
     text-align: center;
     line-height: 100px;
     letter-spacing: 20px;
@@ -25,7 +40,7 @@ header{
     grid-row-end: 4;*/
 }
 
-main{
+main {
     text-align: center;
     background-color: blue;
     line-height: 500px;
@@ -36,7 +51,7 @@ main{
     grid-area: main;
 }
 
-aside{
+aside {
     text-align: center;
     background-color: red;
     line-height: 500px;
@@ -47,7 +62,7 @@ aside{
     grid-area: aside;
 }
 
-footer{
+footer {
     text-align: center;
     background-color: rgb(67, 243, 67);
     letter-spacing: 20px;
@@ -55,19 +70,4 @@ footer{
     /*grid-column-start: 1;
     grid-column-end: 3;*/
     grid-area: footer;
-}
-
-.container{
-    display: grid;
-    grid-template-columns: 3fr 1fr; /*indica que bloco será flex, ou seja se adapata aos tamanhos de tela*/
-    grid-template-rows:20vh 70vh 10vh;
-    grid-template-areas: "header header"
-                        "main aside"
-                        "footer footer"
-    ;
-                        
-
-    /*grid-gap: 20px 10px;
-    grid-row-gap: 20px;
-    grid-column-gap: 20px*/
 }
